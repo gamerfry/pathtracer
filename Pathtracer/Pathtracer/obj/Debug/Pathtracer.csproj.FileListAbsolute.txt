@@ -1,0 +1,1 @@
+c:\users\fryju_000\documents\visual studio 2013\Projects\Pathtracer\Pathtracer\bin\Debug\Pathtracer.exe.config
