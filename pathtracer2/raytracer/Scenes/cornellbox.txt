@@ -1,0 +1,122 @@
+Scene:
+	mode raytrace
+	sample 1
+	pinhole  0 0 30  0 0 0  0 1 0  53 53
+	# lens  0 0 30  0 0 0  0 1 0  53 53  2.5
+	pixel 512 512
+	depth 2
+	bias .0005
+	name cornellBox
+
+
+#### LIGHTS ####
+
+
+# PointLight 0 9.95 0 45 45 45 falloff 0 0 1
+AreaLight  -3.5 9.5 -3.5  1.5 1.5 1.5  7 0 0  0 0 7  falloff 0 0 1
+
+
+#### MATERIALS ####
+
+
+MATERIAL: refractiveSphere
+	type dielectric
+	ke .02 .02 .02
+	kr 1 1 1
+	kt 1 1 1
+	index 1.75
+ENDMATERIAL
+
+
+MATERIAL: whiteWall
+	type diffuse
+	ke .1 .1 .1
+	kd .9 .9 .9
+ENDMATERIAL
+
+
+MATERIAL: greenWall
+	type diffuse
+	ke 0 .1 0
+	kd 0 .9 0
+ENDMATERIAL
+
+
+MATERIAL: redWall
+	type diffuse
+	ke .1 0 0
+	kd .9 0 0
+ENDMATERIAL
+
+
+#### GEOMETRY ####
+
+
+# STUFF IN THE BOX
+
+Sphere:
+	center 0 -7 0 radius 3
+	Transform: NONE
+	Material: refractiveSphere
+
+# THE BOX
+
+# Floor
+
+Triangle:
+	a -10 -10 10 b 10 -10 -10 c -10 -10 -10
+	Transform: NONE
+	Material: whiteWall
+
+Triangle:
+	a 10 -10 10 b 10 -10 -10 c -10 -10 10
+	Transform: NONE
+	Material: whiteWall
+
+# Ceiling
+
+Triangle:
+	a -10 10 10 b 10 10 -10 c -10 10 -10
+	Transform: NONE
+	Material: whiteWall
+
+Triangle:
+	a 10 10 10 b 10 10 -10 c -10 10 10
+	Transform: NONE
+	Material: whiteWall
+
+# Back wall
+
+Triangle:
+	a -10 -10 -10 b 10 10 -10 c -10 10 -10
+	Transform: NONE
+	Material: whiteWall	
+
+Triangle:
+	a 10 -10 -10 b 10 10 -10 c -10 -10 -10
+	Transform: NONE
+	Material: whiteWall
+
+# Red wall
+
+Triangle:
+	a -10 10 10 b -10 -10 -10 c -10 10 -10
+	Transform: NONE
+	Material: redWall
+
+Triangle:
+	a -10 -10 10 b -10 -10 -10 c -10 10 10
+	Transform: NONE
+	Material: redWall
+
+# Green wall
+
+Triangle:
+	a 10 -10 10 b 10 10 -10 c 10 -10 -10
+	Transform: NONE
+	Material: greenWall
+
+Triangle:
+	a 10 10 10 b 10 10 -10 c 10 -10 10
+	Transform: NONE
+	Material: greenWall

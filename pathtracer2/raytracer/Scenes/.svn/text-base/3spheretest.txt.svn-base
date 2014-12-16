@@ -1,0 +1,58 @@
+Scene:
+	pinhole 0 0 0 -1 1 -3 -1 -1 -3 1 1 -3 1 -1 -3
+	pixel 500 500
+	depth 1
+	sample 1
+	bias .005
+	name testImage
+	
+DirectionalLight 0.57735027 -0.57735027 -0.57735027 1 1 1
+DirectionalLight 0.57735027 0.57735027 -0.57735027 0 0 1
+
+Sphere:
+	center 0 0 -20 radius 3
+	Transform: NONE
+	ka .1 .1 .1
+	ks 1 1 1
+	kr 0 0 0
+	kd 1 0 1
+	sp 50
+	kt 0 0 0
+	index 1.5
+	Texture: NONE
+	
+Sphere:
+	center -2 2 -15 radius 1
+	Transform: NONE
+	ka .1 .1 .1
+	ks 1 1 1
+	kr 0 0 0
+	kd 1 1 0
+	sp 50
+	kt 0 0 0
+	index 1.5
+	Texture: NONE
+
+Sphere:
+	center -2 -2 -15 radius 1
+	Transform: NONE
+	ka .1 .1 .1
+	ks 1 1 1
+	kr 0 0 0
+	kd 0 1 1
+	sp 50
+	kt 0 0 0
+	index 1.5
+	Texture: NONE
+	
+Triangle:
+	a 5 5 -17 b 1 4 -20 c 6 -1 -20
+	Transform: NONE
+	ka .1 .1 .1
+	ks 1 1 1
+	kr 1 1 1
+	kd .1 .1 .1
+	sp 50
+	kt 0 0 0
+	index 1.5
+	Texture: NONE

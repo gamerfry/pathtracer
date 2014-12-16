@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A57B627A-71E6-488C-8A98-2B8FB6560957}</ProjectGuid>
+    <RootNamespace>$safeprojectname$</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\..\Desktop\pathtracer2\raytracer\algebra3.cpp" />
+    <ClCompile Include="..\..\..\..\..\Desktop\pathtracer2\raytracer\Camera.cpp" />
+    <ClCompile Include="..\..\..\..\..\Desktop\pathtracer2\raytracer\Environment.cpp" />
+    <ClCompile Include="..\..\..\..\..\Desktop\pathtracer2\raytracer\Film.cpp" />
+    <ClCompile Include="..\..\..\..\..\Desktop\pathtracer2\raytracer\Lights.cpp" />
+    <ClCompile Include="..\..\..\..\..\Desktop\pathtracer2\raytracer\Material.cpp" />
+    <ClCompile Include="..\..\..\..\..\Desktop\pathtracer2\raytracer\mersenne.cpp" />
+    <ClCompile Include="..\..\..\..\..\Desktop\pathtracer2\raytracer\objParser.cpp" />
+    <ClCompile Include="..\..\..\..\..\Desktop\pathtracer2\raytracer\Primitives.cpp" />
+    <ClCompile Include="..\..\..\..\..\Desktop\pathtracer2\raytracer\Ray.cpp" />
+    <ClCompile Include="..\..\..\..\..\Desktop\pathtracer2\raytracer\raytrace.cpp" />
+    <ClCompile Include="..\..\..\..\..\Desktop\pathtracer2\raytracer\RayTracer.cpp" />
+    <ClCompile Include="..\..\..\..\..\Desktop\pathtracer2\raytracer\rgb.cpp" />
+    <ClCompile Include="..\..\..\..\..\Desktop\pathtracer2\raytracer\Sampler.cpp" />
+    <ClCompile Include="..\..\..\..\..\Desktop\pathtracer2\raytracer\Scene.cpp" />
+    <ClCompile Include="..\..\..\..\..\Desktop\pathtracer2\raytracer\Shader.cpp" />
+    <ClCompile Include="..\..\..\..\..\Desktop\pathtracer2\raytracer\Shapes.cpp" />
+    <ClCompile Include="AABB.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\..\Desktop\pathtracer2\raytracer\algebra3.h" />
+    <ClInclude Include="..\..\..\..\..\Desktop\pathtracer2\raytracer\Camera.h" />
+    <ClInclude Include="..\..\..\..\..\Desktop\pathtracer2\raytracer\Environment.h" />
+    <ClInclude Include="..\..\..\..\..\Desktop\pathtracer2\raytracer\Film.h" />
+    <ClInclude Include="..\..\..\..\..\Desktop\pathtracer2\raytracer\IntersectRecord.h" />
+    <ClInclude Include="..\..\..\..\..\Desktop\pathtracer2\raytracer\Lights.h" />
+    <ClInclude Include="..\..\..\..\..\Desktop\pathtracer2\raytracer\Material.h" />
+    <ClInclude Include="..\..\..\..\..\Desktop\pathtracer2\raytracer\objParser.h" />
+    <ClInclude Include="..\..\..\..\..\Desktop\pathtracer2\raytracer\Primitives.h" />
+    <ClInclude Include="..\..\..\..\..\Desktop\pathtracer2\raytracer\randomc.h" />
+    <ClInclude Include="..\..\..\..\..\Desktop\pathtracer2\raytracer\Ray.h" />
+    <ClInclude Include="..\..\..\..\..\Desktop\pathtracer2\raytracer\RayTracer.h" />
+    <ClInclude Include="..\..\..\..\..\Desktop\pathtracer2\raytracer\RenderSettings.h" />
+    <ClInclude Include="..\..\..\..\..\Desktop\pathtracer2\raytracer\rgb.h" />
+    <ClInclude Include="..\..\..\..\..\Desktop\pathtracer2\raytracer\Sampler.h" />
+    <ClInclude Include="..\..\..\..\..\Desktop\pathtracer2\raytracer\Scene.h" />
+    <ClInclude Include="..\..\..\..\..\Desktop\pathtracer2\raytracer\Shader.h" />
+    <ClInclude Include="..\..\..\..\..\Desktop\pathtracer2\raytracer\Shapes.h" />
+    <ClInclude Include="AABB.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\..\..\Desktop\pathtracer2\raytracer\raytracer.vcproj" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
